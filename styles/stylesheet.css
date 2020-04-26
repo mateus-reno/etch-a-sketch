@@ -65,13 +65,12 @@
 }
 
 #wrapper {
-    //display: flex;
-    //justify-content: center;  
+    display: flex;
+    justify-content: center;  
 }
 
 #container {
-    //display: grid;
-    //grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
     width: 960px;
     height: 960px;
 }
