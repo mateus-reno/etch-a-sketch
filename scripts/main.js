@@ -22,14 +22,12 @@ function createGrid(xAxis, yAxis){
     for (i = 1; i <= xAxis * yAxis; i++) {
         let newDiv = document.createElement('div')
         newDiv.classList.add("gridSquare");
-        
         newDiv.addEventListener("mouseover", event => {
-            newDiv.setAttribute('style', 'outline: 1px solid white; background: red')
+            newDiv.setAttribute('style', 'outline: 1px solid white')
+            newDiv.style.backgroundColor = getRandomColor()
             });
-
         newDiv.setAttribute('style', 'flex:1; outline: 1px solid white; background: blue'); 
         sketchpad.appendChild(newDiv)
-        console.log(newDiv)
     }
 }
 
@@ -43,3 +41,13 @@ function clearGrid () {
         sketchpad.innerHTML = ''    
 }
 
+// create a random color for the square
+
+function getRandomColor() {
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }   
